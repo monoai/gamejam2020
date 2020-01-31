@@ -4,7 +4,7 @@ signal hit
 const DAMAGE_1 = 5
 
 func _ready():
-	
+	if
 	pass # Replace with function body.
 
 

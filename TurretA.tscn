@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TurretA.gd" type="Script" id=1]
+[ext_resource path="res://awit kacer 2trans.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.5791, 23.9794 )
+
+[node name="Turret1" type="Area2D"]
+scale = Vector2( 1, 1.5 )
+gravity = 0.0
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1, 0.666667 )
+frames = SubResource( 1 )
+
+[node name="awit kacer 2trans" type="Sprite" parent="."]
+position = Vector2( -4.75973, 3.41826 )
+scale = Vector2( 0.0486362, 0.0324241 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 1, 1.5 )
+shape = SubResource( 2 )

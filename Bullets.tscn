@@ -7,7 +7,7 @@
 radius = 4.31231
 height = 6.28863
 
-[node name="Node" type="Node"]
+[node name="Bullet" type="Node"]
 script = ExtResource( 1 )
 
 [node name="blush transparent" type="Sprite" parent="."]
