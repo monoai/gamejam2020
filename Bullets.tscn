@@ -7,14 +7,15 @@ radius = 4.31231
 height = 6.28863
 
 [node name="Bullet" type="RigidBody2D"]
+scale = Vector2( 0.15, 0.15 )
 gravity_scale = 0.0
 
 [node name="blush transparent" type="Sprite" parent="."]
-position = Vector2( -0.341534, -0.215629 )
-scale = Vector2( 0.898048, 0.898048 )
+position = Vector2( 0.532043, 0.95549 )
+scale = Vector2( 0.185592, 0.185592 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-scale = Vector2( 25, 25 )
+scale = Vector2( 5, 5 )
 shape = SubResource( 1 )

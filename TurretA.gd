@@ -8,7 +8,7 @@ func _ready():
 func _on_Turret1_body_entered(body):
 	var health = 100
 	health = health - DAMAGE_1
-	$Health.set_text(health)
+	$Health.set_text(str(health))
 	pass # Replace with function body.
 
 

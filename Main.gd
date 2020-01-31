@@ -12,8 +12,6 @@ func _ready():
 
 
 func _on_ShootTimer_timeout():
-	$ShootTimer.start()
 	var bullet = Bullets.instance()
 	add_child(bullet)
-	var speed = 5
 	pass # Replace with function body.
