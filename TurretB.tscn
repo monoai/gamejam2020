@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://awit kacer 2trans.png" type="Texture" id=1]
+[ext_resource path="res://TurretB.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39.75, 60.25 )
+
+[node name="TurretB" type="Area2D"]
+gravity = 0.0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 1, 1.5 )
+shape = SubResource( 1 )
+
+[node name="awit kacer 2trans" type="Sprite" parent="."]
+position = Vector2( 1.58896, -0.143829 )
+scale = Vector2( 0.0743163, 0.0880371 )
+texture = ExtResource( 1 )
+flip_h = true
+[connection signal="body_entered" from="." to="." method="_on_TurretB_body_entered"]
