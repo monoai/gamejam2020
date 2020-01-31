@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://TurretA.gd" type="Script" id=1]
 [ext_resource path="res://awit kacer 2trans.png" type="Texture" id=2]
+[ext_resource path="res://Bullets.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -14,10 +15,11 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16.5791, 23.9794 )
 
-[node name="Turret1" type="Area2D"]
+[node name="TurretA" type="Area2D"]
 scale = Vector2( 1, 1.5 )
 gravity = 0.0
 script = ExtResource( 1 )
+Bullets = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1, 0.666667 )
@@ -31,3 +33,14 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 1, 1.5 )
 shape = SubResource( 2 )
+
+[node name="Health" type="Label" parent="."]
+margin_left = 30.706
+margin_top = -27.5567
+margin_right = 70.706
+margin_bottom = -13.5567
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="." to="." method="_on_Turret1_body_entered"]

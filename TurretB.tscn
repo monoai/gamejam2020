@@ -19,3 +19,4 @@ position = Vector2( 1.58896, -0.143829 )
 scale = Vector2( 0.0743163, 0.0880371 )
 texture = ExtResource( 1 )
 flip_h = true
+[connection signal="body_entered" from="." to="." method="_on_TurretB_body_entered"]
