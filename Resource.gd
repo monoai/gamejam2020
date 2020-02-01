@@ -1,5 +1,8 @@
 extends Node2D
 
+class_name resource
+
+var res_dict = {0:"wod", 1:"Rak", 2:"brek", 3:"whet", 4:"clei", 5: "stel"}
 
 """
 0 - wood
@@ -13,15 +16,16 @@ extends Node2D
 var type_index = 0
 var wood = preload("res://icon.png")
 
-signal collected
+signal collected(type)
 
 func _ready():
 	connect("collected",get_parent(),"res_collected")
+	$Sprite.texture = load("res://Assets/" + res_dict[type_index] + ".png")
 
 func _on_Area2D_body_entered(body):
-	emit_signal("collected")
-	queue_free()
+	emit_signal("collected",type_index)
+	if body is player1 or body is player2:
+		body.inventory[type_index] += 1
+		body.update_storage()
+		queue_free()
 
-func set_res(type: int):
-	$Sprite.set_texture(wood)
-	type_index = type

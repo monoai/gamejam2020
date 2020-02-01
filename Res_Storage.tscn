@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Res_Storage.gd" type="Script" id=1]
+
+[node name="Res_Storage" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Wood" type="Label" parent="."]
+margin_left = 27.55
+margin_top = 19.0
+margin_right = 67.55
+margin_bottom = 33.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stone" type="Label" parent="."]
+margin_left = 30.3999
+margin_top = 44.6499
+margin_right = 70.3999
+margin_bottom = 58.6499
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clay" type="Label" parent="."]
+margin_left = 30.4
+margin_top = 69.3499
+margin_right = 70.4
+margin_bottom = 83.3499
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Straw" type="Label" parent="."]
+anchor_right = 0.025
+margin_left = 33.25
+margin_top = 93.0998
+margin_right = 43.25
+margin_bottom = 107.1
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Brick" type="Label" parent="."]
+margin_left = 164.35
+margin_top = 39.8999
+margin_right = 204.35
+margin_bottom = 53.8999
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Steel" type="Label" parent="."]
+margin_left = 96.8998
+margin_top = 142.5
+margin_right = 136.9
+margin_bottom = 156.5
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
