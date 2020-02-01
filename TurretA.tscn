@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://TurretA.gd" type="Script" id=1]
+[ext_resource path="res://awit kacer 2trans.png" type="Texture" id=2]
+[ext_resource path="res://Bullets.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.5791, 23.9794 )
+
+[node name="TurretA" type="Area2D"]
+scale = Vector2( 1, 1.5 )
+gravity = 0.0
+script = ExtResource( 1 )
+Bullet = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1, 0.666667 )
+frames = SubResource( 1 )
+
+[node name="awit kacer 2trans" type="Sprite" parent="."]
+position = Vector2( -4.75973, 3.41826 )
+scale = Vector2( 0.0486362, 0.0324241 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 1, 1.5 )
+shape = SubResource( 2 )
+
+[node name="Health" type="Label" parent="."]
+margin_left = 30.706
+margin_top = -27.5567
+margin_right = 70.706
+margin_bottom = -13.5567
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShootTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="body_entered" from="." to="." method="_on_Turret1_body_entered"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

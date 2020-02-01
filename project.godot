@@ -28,12 +28,25 @@ _global_script_classes=[ {
 "class": "resource",
 "language": "GDScript",
 "path": "res://Resource.gd"
+}, {
+"base": "RigidBody2D",
+"class": "bullet_class",
+"language": "GDScript",
+"path": "res://Bullets.gd"
+}, {
+"base": "Area2D",
+"class": "turret_b",
+"language": "GDScript",
+"path": "res://TurretB.gd"
 } ]
+
 _global_script_class_icons={
 "player": "",
 "player1": "",
 "player2": "",
 "resource": ""
+"bullet_class": "",
+"turret_b": ""
 }
 
 [application]
