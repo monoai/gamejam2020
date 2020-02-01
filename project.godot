@@ -37,13 +37,10 @@ _global_script_class_icons={
 }
 
 [application]
-
 config/name="GGJ2020"
 run/main_scene="res://Arena.tscn"
-config/icon="res://icon.png"
 
 [display]
-
 window/size/width=1200
 window/size/height=1200
 window/size/borderless=true
