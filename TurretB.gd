@@ -1,10 +1,18 @@
 extends Area2D
 
-const DAMAGE_1 = 5
+signal hit
+var health = 100
+class_name turret_b
+
 func _ready():
 	pass # Replace with function body.
 
 func _on_TurretB_body_entered(body):
-	var health = 100
-	health = health - DAMAGE_1
+	emit_signal("hit")
+	if body is bullet_class:
+		body.queue_free()
+	if health == 0:
+		queue_free()
+	health -= 25
+	$Health.set_text(str(health))
 	pass # Replace with function body.
