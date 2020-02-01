@@ -1,9 +1,13 @@
-extends Node
+extends Area2D
+
+export(PackedScene) var Bullet
 
 const DAMAGE_1 = 5
+var BULL_SPEED = 1000
+var target
 
 func _ready():
-	pass # Replace with function body.
+	set_target()
 
 func _on_Turret1_body_entered(body):
 	var health = 100
@@ -12,5 +16,16 @@ func _on_Turret1_body_entered(body):
 	pass # Replace with function body.
 
 
+func set_target():
+	#add code here to select target
+	target = get_parent().get("TurretB2")
+	pass
+	
 func _on_ShootTimer_timeout():
-	pass # Replace with function body.
+	var bullet = Bullet.instance()
+	bullet.position = position
+	if(target!=null):
+		add_child(bullet)
+		bullet.position = Vector2(0,0)
+		bullet.linear_velocity = Vector2(target.position - position).normalized() * BULL_SPEED
+	set_target()
